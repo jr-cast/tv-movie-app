@@ -7,7 +7,7 @@
 
 ## Built With
 
-- Jvascript
+- Javascript
 - Webpack
 - HTML&CSS
 
