@@ -25,6 +25,7 @@
   "homepage": "https://github.com/ShingiraiBhengesa/Javascript-Capstone#readme",
   "devDependencies": {
     "eslint": "^8.15.0",
+    "hint": "^6.2.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
