@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# JavaScript Capstone 2
 
-> Description the project.
+> A javascript application that displays movies and TV shows from the TVMAZE API
 
 
 ## Built With
@@ -48,9 +48,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@jr-cast](https://github.com/jr-cast)
+- Twitter: [@josercastanos](https://twitter.com/josercastanos)
+- LinkedIn: [@jr-cast](https://linkedin.com/in/jr-cast)
 
 ## 🤝 Contributing
 
