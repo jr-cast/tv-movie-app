@@ -12,8 +12,8 @@
 
 body {
   @include font-b;
-  background-color: rgb(91, 90, 90)
 
+  background-color: rgb(91, 90, 90);
 }
 
 header {
@@ -73,7 +73,6 @@ header {
       @include flex-colum;
 
       li {
-
         color: #fff;
 
         a {

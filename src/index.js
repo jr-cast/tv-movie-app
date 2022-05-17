@@ -11,8 +11,6 @@ const aboutLink = document.querySelector('#about__link');
 const movieSection = document.querySelector('#movie-section');
 const aboutSection = document.querySelector('#about-section');
 const bluSection = document.querySelector('#bluRay-section');
-const headerNav = document.querySelector('#header-nav');
-const menuBtn = document.querySelector('#menu__button');
 const dvd = 'action';
 const bluray = 'girls';
 
