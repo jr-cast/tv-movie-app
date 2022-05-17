@@ -1,4 +1,5 @@
 import './scss/style.scss';
+import './styles.css';
 import getMovieData from './modules/consumeTVMazeAPI.js';
 import displayMovies from './modules/displayMovies.js';
 import totalItems from './modules/allItemsCounter.js';
