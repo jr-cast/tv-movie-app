@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { LicenseWebpackPlugin } = require('license-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,10 +9,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
       template: './src/index.html',
     }),
-    new LicenseWebpackPlugin(),
   ],
   output: {
     filename: 'main_bundle.js',
@@ -22,8 +19,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/,
+        type: 'asset/resource',
       },
     ],
   },
