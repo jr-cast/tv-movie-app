@@ -13,16 +13,18 @@
 .inner-details {
   width: 100%;
   max-width: 50em;
-  padding: 1.5em;
+  padding: 4em;
   height: calc(100% - 3.5em);
   max-height: 70em;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   background-color: white;
   font-size: 0.8em;
   overflow-y: auto;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  align-items: center;
 }
 
 .hidden {
@@ -38,4 +40,20 @@
 .movie-wrapper:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.custom {
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+}
+
+.cardTitle {
+  color: black;
+  font-size: 2.5em;
+}
+
+.summary {
+  color: black;
+  font-size: 1.5em;
 }

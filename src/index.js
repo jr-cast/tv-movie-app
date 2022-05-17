@@ -18,6 +18,27 @@ const bluray = 'girls';
 const homeItems = document.querySelector('.movie-section__items');
 getMovieData(0, dvd, 50).then((movieList) => {
   displayMovies(movieList, dvdID, 'movie');
+  const movies = document.getElementsByClassName('movie-wrapper');
+  // TESTING
+  for (let i = 0; i < movies.length; i++) {
+    movies[i].addEventListener('click', () => {
+      const details = document.getElementById('details');
+      const innerdetails = document.getElementById('inner-details');
+      details.classList.toggle('hidden');
+      const img = document.createElement('img');
+      img.src = document.getElementById(`img_${i + 1}`).src;
+      const title = document.createElement('h3');
+      title.innerHTML = document.getElementById(`name${i + 1}`).innerHTML;
+      title.classList.add('cardTitle');
+      const summary = document.createElement('p');
+      summary.classList.add('summary');
+      summary.innerHTML = movieList[i + 1].summary;
+      innerdetails.appendChild(img);
+      innerdetails.appendChild(title);
+      innerdetails.appendChild(summary);
+    })
+  }
+  // finish TESTING
   const all = document.querySelectorAll('#movie-section > .movie-wrapper');
   totalItems(all, homeItems);
 });
@@ -55,3 +76,8 @@ bluLink.addEventListener('click', () => {
   aboutSection.classList.add('toggle');
   bluSection.classList.remove('toggle');
 });
+
+// getMovieData(0, dvd, 50).then((movieList) => {
+
+//   movieList.forEach(item => console.log(item.image.medium));
+// });
