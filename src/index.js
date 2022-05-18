@@ -20,7 +20,6 @@ const homeItems = document.querySelector(".movie-section__items");
 getMovieData(0, dvd, 50).then((movieList) => {
   displayMovies(movieList, dvdID, "movie");
   details(movieList);
-  console.log(movieList);
   const all = document.querySelectorAll("#movie-section > .movie-wrapper");
   totalItems(all, homeItems);
 });

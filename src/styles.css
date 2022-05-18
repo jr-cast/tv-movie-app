@@ -89,8 +89,8 @@ body {
 }
 
 .commentSection {
-  /* border: 2px solid white; */
-  width: 100%;
+  border: 2px solid white;
+  width: 20em;
   height: 22em;
   margin-top: 4em;
 }
@@ -124,4 +124,10 @@ body {
 .commentSection button:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+
+.commentsWrapper {
+  width: 100%;
+  border: 2px solid white;
+  height: 10em;
 }

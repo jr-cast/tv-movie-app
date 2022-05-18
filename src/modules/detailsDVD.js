@@ -39,6 +39,29 @@ const details = (movieList) => {
       const commentBtn = document.createElement("button");
       commentBtn.id = `commentBtn${i}`;
       commentBtn.innerHTML = "Comment";
+      const commentsWrapper = document.createElement("div");
+      commentsWrapper.classList.add("commentsWrapper");
+      const commentTitle = document.createElement("h2");
+      commentTitle.innerHTML = "Comments";
+      const commentsData = async () => {
+        const baseURL =
+          "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zggEBXzpFcQqjDxvMhMz";
+        const connect = await fetch(
+          `${baseURL}/comments?item_id=commentBtn${i}`,
+          {
+            method: "GET",
+          }
+        );
+        const response = await connect.json();
+        console.log(response);
+        for (let i = 0; i < response.length; i++) {
+          const entry = document.createElement("p");
+          entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
+          commentsWrapper.appendChild(entry);
+          console.log(response[i].username);
+        }
+      };
+      commentsData();
       innerWrapper.appendChild(img);
       innerWrapDetails.appendChild(summary);
       innerWrapDetails.appendChild(duration);
@@ -47,6 +70,8 @@ const details = (movieList) => {
       innerWrapper.appendChild(innerWrapDetails);
       innerdetails.appendChild(innerWrapper);
       innerdetails.appendChild(commentSection);
+      innerWrapDetails.appendChild(commentsWrapper);
+      commentsWrapper.appendChild(commentTitle);
       commentSection.appendChild(commentsTitle);
       commentSection.appendChild(input_name);
       commentSection.appendChild(input_comment);
