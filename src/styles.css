@@ -89,8 +89,39 @@ body {
 }
 
 .commentSection {
-  border: 2px solid white;
+  /* border: 2px solid white; */
   width: 100%;
-  height: 21em;
-  margin-top: 5em;
+  height: 22em;
+  margin-top: 4em;
+}
+
+.commentSection > * {
+  display: block;
+  margin: 1rem;
+}
+
+.commentSection input {
+  padding: 0.5em;
+  font-size: 1.2em;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+.commentSection button {
+  border-radius: 5%;
+  width: 5rem;
+  height: 40px;
+  border-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+.commentSection button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
