@@ -67,6 +67,7 @@ body {
 .innerWrap {
   display: flex;
   align-items: center;
+  height: 25em;
 }
 
 .innerWrapDetails {
@@ -89,10 +90,12 @@ body {
 }
 
 .commentSection {
-  border: 2px solid white;
-  width: 20em;
-  height: 22em;
-  margin-top: 4em;
+  /* border: 2px solid white; */
+  width: 100%;
+  /* height: 22em; */
+  /* position: fixed;
+  left: 20em;
+  bottom: 5em; */
 }
 
 .commentSection > * {
@@ -106,12 +109,13 @@ body {
   background-color: black;
   color: white;
   border: 2px solid white;
+  width: 95%;
 }
 
 .commentSection button {
   border-radius: 5%;
   width: 5rem;
-  height: 40px;
+  height: 20px;
   border-style: none;
   display: flex;
   align-items: center;
@@ -129,5 +133,11 @@ body {
 .commentsWrapper {
   width: 100%;
   border: 2px solid white;
-  height: 10em;
+  min-height: 165%;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.commentsWrapper h2 {
+  margin-bottom: 0.5em;
 }

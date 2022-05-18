@@ -1,6 +1,7 @@
-const detailsDVD = (movieList) => {
+const detailsBLU = (movieList) => {
   const movies = document.getElementsByClassName("movie-wrapper");
-  for (let i = 0; i < movies.length; i++) {
+  console.log(movies);
+  for (let i = 50; i < movies.length; i++) {
     movies[i].addEventListener("click", () => {
       const details = document.getElementById("details");
       const innerdetails = document.getElementById("inner-details");
@@ -10,20 +11,20 @@ const detailsDVD = (movieList) => {
       const innerWrapDetails = document.createElement("div");
       innerWrapDetails.classList.add("innerWrapDetails");
       const img = document.createElement("img");
-      img.src = document.getElementById(`img_${i + 1}`).src;
+      img.src = document.getElementById(`img_${i + 4}`).src;
       const duration = document.createElement("p");
-      duration.innerHTML = `Duration: ${movieList[i].runtime} minutes`;
+      duration.innerHTML = `Duration: ${movieList[i - 50].runtime} minutes`;
       duration.classList.add("summary");
       const rating = document.createElement("p");
       rating.classList.add("summary");
-      rating.innerHTML = `Rating: ${movieList[i].rating.average}`;
+      rating.innerHTML = `Rating: ${movieList[i - 50].rating.average}`;
       const summary = document.createElement("p");
       summary.classList.add("summary");
-      summary.innerHTML = movieList[i].summary;
+      summary.innerHTML = movieList[i - 50].summary;
       const website = document.createElement("a");
       website.classList.add("summary");
       website.innerHTML = "Visit the official website";
-      website.href = movieList[i].officialSite;
+      website.href = movieList[i - 50].officialSite;
       const closeBtn = document.getElementById("closeBtn");
       const commentSection = document.createElement("div");
       commentSection.classList.add("commentSection");
@@ -43,7 +44,7 @@ const detailsDVD = (movieList) => {
       commentTitle.innerHTML = "Comments";
       const commentsData = async () => {
         const baseURL =
-          "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zggEBXzpFcQqjDxvMhMz";
+          "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DiufW768skxheMu2XO3y";
         const connect = await fetch(
           `${baseURL}/comments?item_id=commentBtn${i}`,
           {
@@ -66,6 +67,7 @@ const detailsDVD = (movieList) => {
       innerWrapDetails.appendChild(website);
       innerWrapper.appendChild(innerWrapDetails);
       innerdetails.appendChild(innerWrapper);
+      // innerdetails.appendChild(commentSection);
       innerWrapDetails.appendChild(commentsWrapper);
       commentsWrapper.appendChild(commentSection);
       commentSection.appendChild(commentsTitle);
@@ -84,7 +86,7 @@ const detailsDVD = (movieList) => {
           alert("Not empty values allowed, please add your name and comment!");
         } else {
           const baseURL =
-            "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zggEBXzpFcQqjDxvMhMz";
+            "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DiufW768skxheMu2XO3y";
           const connect = await fetch(`${baseURL}/comments/`, {
             method: "POST",
             body: JSON.stringify({
@@ -102,4 +104,4 @@ const detailsDVD = (movieList) => {
   }
 };
 
-export default detailsDVD;
+export default detailsBLU;
