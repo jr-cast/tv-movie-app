@@ -50,7 +50,7 @@ const detailsDVD = (movieList) => {
           },
         );
         const response = await connect.json();
-        if (response.length !== undefined) {
+        if (connect.status === 200) {
           commentTitle.innerHTML += `(${response.length})`;
           for (let i = 0; i < response.length; i += 1) {
             const entry = document.createElement('p');
