@@ -50,6 +50,7 @@ const detailsDVD = (movieList) => {
           },
         );
         const response = await connect.json();
+        console.log(response.length);
         if (connect.status === 200) {
           commentTitle.innerHTML += `(${response.length})`;
           for (let i = 0; i < response.length; i += 1) {
@@ -59,7 +60,7 @@ const detailsDVD = (movieList) => {
           }
         }
       };
-      commentsData();
+      commentsData()
       innerWrapper.appendChild(img);
       innerWrapDetails.appendChild(summary);
       innerWrapDetails.appendChild(duration);
