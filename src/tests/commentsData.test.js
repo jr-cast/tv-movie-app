@@ -1,11 +1,11 @@
-import commentData from '../modules/commentData.js';
+import commentDataMock from '../modules/commentData.js'
 
 beforeAll(() => {
   document.body.innerHTML = `<div class='commentsWrapper'></div>`;
 });
 
 test('The commentData function returns the total number of comments in the details pop-up', () => {
-  // ## Arrange
+  // Arrange
   const commentSection = document.querySelector('.commentsWrapper');
   commentSection.innerHTML = `<p>2022-05-18---&gt; jose :  test2</p>
   <p>2022-05-18---&gt; test</p>
@@ -15,10 +15,12 @@ test('The commentData function returns the total number of comments in the detai
   <p>2022-05-18---&gt; test</p>
   <p>2022-05-18---&gt; test</p>`
 
-  // ## Add
+  // Add
   const numberOfItems = document.querySelectorAll('p');
-  const comments = commentData();
-  expect(comments).toEqual(numberOfItems.length);
+  let objLength = commentDataMock();
+
+  // Assert
+  expect(numberOfItems.length).toBe(objLength);
 });
 
 
