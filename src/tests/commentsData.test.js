@@ -1,4 +1,4 @@
-import commentDataMock from '../modules/commentData.js'
+import commentDataMock from '../modules/commentDataMock.js'
 
 beforeAll(() => {
   document.body.innerHTML = `<div class='commentsWrapper'></div>`;
