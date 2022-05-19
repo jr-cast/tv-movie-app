@@ -50,11 +50,14 @@ const detailsDVD = (movieList) => {
           },
         );
         const response = await connect.json();
-        commentTitle.innerHTML += `(${response.length})`;
-        for (let i = 0; i < response.length; i += 1) {
-          const entry = document.createElement('p');
-          entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
-          commentsWrapper.appendChild(entry);
+        console.log(response.length);
+        if (connect.status === 200) {
+          commentTitle.innerHTML += `(${response.length})`;
+          for (let i = 0; i < response.length; i += 1) {
+            const entry = document.createElement('p');
+            entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
+            commentsWrapper.appendChild(entry);
+          }
         }
       };
       commentsData();
@@ -77,7 +80,6 @@ const detailsDVD = (movieList) => {
         innerWrapper.remove();
         commentSection.remove();
       });
-
       commentBtn.addEventListener('click', async () => {
         if (!inputName.value || !inputComment.value) {
           alert('Not empty values allowed, please add your name and comment!');

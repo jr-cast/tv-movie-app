@@ -49,12 +49,14 @@ const detailsBLU = (movieList) => {
             method: 'GET',
           },
         );
-        const response = await connect.json();
-        commentTitle.innerHTML += `(${response.length})`;
-        for (let i = 0; i < response.length; i += 1) {
-          const entry = document.createElement('p');
-          entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
-          commentsWrapper.appendChild(entry);
+        if (connect.status === 200) {
+          const response = await connect.json();
+          commentTitle.innerHTML += `(${response.length})`;
+          for (let i = 0; i < response.length; i += 1) {
+            const entry = document.createElement('p');
+            entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
+            commentsWrapper.appendChild(entry);
+          }
         }
       };
       commentsData();

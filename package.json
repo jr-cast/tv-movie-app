@@ -28,7 +28,8 @@
   },
   "homepage": "https://github.com/ShingiraiBhengesa/Javascript-Capstone#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.12",
+    "@babel/core": "^7.18.0",
+    "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-transform-modules-commonjs": "^7.17.12",
     "@babel/preset-env": "^7.17.12",
     "babel-jest": "^28.1.0",
@@ -51,6 +52,7 @@
     "webpack-dev-server": "^4.9.0"
   },
   "dependencies": {
+    "babel-eslint": "^10.1.0",
     "html-webpack-plugin": "^5.5.0",
     "license-webpack-plugin": "^4.0.2"
   }
