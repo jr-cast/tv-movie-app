@@ -60,7 +60,7 @@ const detailsDVD = (movieList) => {
           }
         }
       };
-      commentsData()
+      commentsData();
       innerWrapper.appendChild(img);
       innerWrapDetails.appendChild(summary);
       innerWrapDetails.appendChild(duration);
