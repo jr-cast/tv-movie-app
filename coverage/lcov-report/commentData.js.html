@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -75,38 +75,44 @@
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const commentData = async () =&gt; {
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/zggEBXzpFcQqjDxvMhMz';
-  const connect = await fetch(
-    `${baseURL}/comments?item_id=commentBtn0`,
-    {
-      method: 'GET',
-    },
-  );
-  const response = <span class="cstat-no" title="statement not covered" >await connect.json();</span>
-<span class="cstat-no" title="statement not covered" >  return response.length;</span>
-};
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// function commentData() {
+//   let response = [{ "creation_date": "2022-05-18", "comment": "test2", "username": "jose " }, { "comment": "Superb!", "username": "Lister", "creation_date": "2022-05-18" }, { "creation_date": "2022-05-18", "username": "Rimmer", "comment": "way up the ziggurat lickety-split ( :" }, { "comment": "Fascinating plot!", "username": "Mary", "creation_date": "2022-05-18" }, { "comment": "", "username": "", "creation_date": "2022-05-18" }, { "comment": "", "username": "", "creation_date": "2022-05-18" }, { "username": "sdsdf", "comment": "sdfsdf", "creation_date": "2022-05-18" }];
+//   let data = JSON.stringify(response);
+//   data = JSON.parse(data);
+//   let objLength = data.length;
+//   return objLength;
+// }
 &nbsp;
-export default commentData;</pre></td></tr></table></pre>
+function commentDataMock() {
+  let response = [{ "creation_date": "2022-05-18", "comment": "test2", "username": "jose " }, { "comment": "Superb!", "username": "Lister", "creation_date": "2022-05-18" }, { "creation_date": "2022-05-18", "username": "Rimmer", "comment": "way up the ziggurat lickety-split ( :" }, { "comment": "Fascinating plot!", "username": "Mary", "creation_date": "2022-05-18" }, { "comment": "", "username": "", "creation_date": "2022-05-18" }, { "comment": "", "username": "", "creation_date": "2022-05-18" }, { "username": "sdsdf", "comment": "sdfsdf", "creation_date": "2022-05-18" }];
+  let Length = response.length;
+  return Length;
+}
+&nbsp;
+export default commentDataMock;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu May 19 2022 12:55:19 GMT-0500 (Central Daylight Time)
+                at Thu May 19 2022 16:50:25 GMT-0500 (Central Daylight Time)
             </div>
         <script src="prettify.js"></script>
         <script>
