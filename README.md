@@ -1,56 +1,52 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# JavaScript Capstone 2
 
-> Description the project.
+> A javascript application that displays movies and TV shows from the TVMAZE API
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Javascript
+- Webpack
+- HTML&CSS
 
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+- Code Editor
+- Git installed
+- Node js installed 
+
 ### Setup
 
-### Install
+- To clone the repository run `git clone` in your terminal
+- Next run `npm install` to install dependances
+- To run the project run `npm start` this will open your web browser on localhost:8080
 
-### Usage
 
 ### Run tests
 
-### Deployment
-
+- Run `npm tets` to jest test results
 
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ShingiraiBhengesa](https://github.com/ShingiraiBhengesa)
+- Twitter: [@bhengesa](https://twitter.com/twitterhandle)
+- LinkedIn: [Shingirai Bhengesa](https://www.linkedin.com/in/shingirai-bhengesa-612b09206/)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@jr-cast](https://github.com/jr-cast)
+- Twitter: [@josercastanos](https://twitter.com/josercastanos)
+- LinkedIn: [@jr-cast](https://linkedin.com/in/jr-cast)
 
 ## 🤝 Contributing
 
