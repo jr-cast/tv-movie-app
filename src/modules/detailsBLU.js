@@ -1,5 +1,8 @@
+import sendCommentBLU from "./sendCommentBLU.js";
+import commentsBLU from "./commentsBLU.js";
+
 const detailsBLU = (movieList) => {
-  const movies = document.getElementsByClassName('movie-wrapper');
+  const movies = document.getElementsByClassName('movie-wrapper__img');
   for (let i = 50; i < movies.length; i += 1) {
     movies[i].addEventListener('click', () => {
       const details = document.getElementById('details');
@@ -41,25 +44,7 @@ const detailsBLU = (movieList) => {
       commentsWrapper.classList.add('commentsWrapper');
       const commentTitle = document.createElement('h2');
       commentTitle.innerHTML = 'Comments';
-      const commentsData = async () => {
-        const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DiufW768skxheMu2XO3y';
-        const connect = await fetch(
-          `${baseURL}/comments?item_id=commentBtn${i}`,
-          {
-            method: 'GET',
-          },
-        );
-        if (connect.status === 200) {
-          const response = await connect.json();
-          commentTitle.innerHTML += `(${response.length})`;
-          for (let i = 0; i < response.length; i += 1) {
-            const entry = document.createElement('p');
-            entry.innerHTML = `${response[i].creation_date}---> ${response[i].username}:  ${response[i].comment}`;
-            commentsWrapper.appendChild(entry);
-          }
-        }
-      };
-      commentsData();
+      commentsBLU(`${i}`, commentTitle, commentsWrapper);
       innerWrapper.appendChild(img);
       innerWrapDetails.appendChild(summary);
       innerWrapDetails.appendChild(duration);
@@ -67,7 +52,6 @@ const detailsBLU = (movieList) => {
       innerWrapDetails.appendChild(website);
       innerWrapper.appendChild(innerWrapDetails);
       innerdetails.appendChild(innerWrapper);
-      // innerdetails.appendChild(commentSection);
       innerWrapDetails.appendChild(commentsWrapper);
       commentsWrapper.appendChild(commentSection);
       commentSection.appendChild(commentsTitle);
@@ -80,24 +64,8 @@ const detailsBLU = (movieList) => {
         innerWrapper.remove();
         commentSection.remove();
       });
-
-      commentBtn.addEventListener('click', async () => {
-        if (!inputName.value || !inputComment.value) {
-          alert('Not empty values allowed, please add your name and comment!');
-        } else {
-          const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/DiufW768skxheMu2XO3y';
-          const connect = await fetch(`${baseURL}/comments/`, {
-            method: 'POST',
-            body: JSON.stringify({
-              item_id: commentBtn.id,
-              username: inputName.value,
-              comment: inputComment.value,
-            }),
-            headers: { 'Content-type': 'application/JSON' },
-          });
-          await connect.text();
-          window.location.reload();
-        }
+      commentBtn.addEventListener('click', () => {
+        sendCommentBLU(commentBtn.id, inputName.value, inputComment.value);
       });
     });
   }
