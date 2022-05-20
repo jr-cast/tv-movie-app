@@ -21,6 +21,6 @@ const sendCommentDVD = async (id, name, comment) => {
     await connect.text();
     window.location.reload();
   }
-}
+};
 
 export default sendCommentDVD;

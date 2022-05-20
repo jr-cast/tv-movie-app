@@ -59,4 +59,3 @@ bluLink.addEventListener('click', () => {
   aboutSection.classList.add('toggle');
   bluSection.classList.remove('toggle');
 });
-

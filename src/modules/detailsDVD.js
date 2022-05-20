@@ -1,5 +1,5 @@
-import sendCommentDVD from "./sendCommentDVD.js";
-import commentsDVD from "./commentsDVD.js";
+import sendCommentDVD from './sendCommentDVD.js';
+import commentsDVD from './commentsDVD.js';
 
 const detailsDVD = (movieList) => {
   const movies = document.getElementsByClassName('movie-wrapper__comment-button');
@@ -35,7 +35,7 @@ const detailsDVD = (movieList) => {
       commentsTitle.innerHTML = 'Leave a comment!';
       const inputName = document.createElement('input');
       inputName.placeholder = 'Your name here';
-      inputName.id = `iN`;
+      inputName.id = 'iN';
       const inputComment = document.createElement('input');
       inputComment.placeholder = 'Your insights';
       const commentBtn = document.createElement('button');

@@ -1,5 +1,5 @@
-import sendCommentBLU from "./sendCommentBLU.js";
-import commentsBLU from "./commentsBLU.js";
+import sendCommentBLU from './sendCommentBLU.js';
+import commentsBLU from './commentsBLU.js';
 
 const detailsBLU = (movieList) => {
   const movies = document.getElementsByClassName('movie-wrapper__img');

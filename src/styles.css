@@ -127,7 +127,6 @@ body {
 .commentsWrapper {
   width: 100%;
   border: 2px solid white;
-  /* min-height: 165%; */
   padding: 1.5em;
   margin-bottom: 1em;
 }

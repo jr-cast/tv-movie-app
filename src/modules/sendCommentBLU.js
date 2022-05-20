@@ -21,6 +21,6 @@ const sendCommentBLU = async (id, name, comment) => {
     await connect.text();
     window.location.reload();
   }
-}
+};
 
 export default sendCommentBLU;
