@@ -4,6 +4,7 @@
 
 > A javascript application that displays movies and TV shows from the TVMAZE API
 
+![cover_img](https://user-images.githubusercontent.com/58822719/174506175-f519b2f6-5a82-408e-ab88-f5d0808b4d77.png)
 
 ## Built With
 
